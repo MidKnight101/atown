@@ -140,19 +140,16 @@
     <div class="form-container">
       <h2>Let’s Tap In</h2> <!---From the "Connect now!" button. May change wording----->
       <p>Tell us about your event and we’ll follow up with a tailored quote.</p>
-      <form action="#" method="post">
+      <form action="https://formspree.io/f/mnjbogzk" method="post">
         <input type="text" name="name" placeholder="Name" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="org" placeholder="Organization / Brand">
-        <select name="type">
-          <option value="">Event Type</option> <!---No longer a dropdown. User should be able to enter their event type in text field.----->
-          <option value="corporate">Corporate</option>
-          <option value="private">Private</option>
-          <option value="brand">Brand Activation</option>
-        </select>
+        
+          <input type="text" name="event_type" placeholder="Event Type (e.g. Corporate, Private)">
+        
         <input type="date" name="date">
         <input type="number" name="guests" placeholder="Guest Count (estimate)">
-        <textarea name="notes" placeholder="Notes (anything else we should know?)"></textarea><!---Change to questions text field.------>
+        <textarea name="questions" placeholder="What questions do you have for us?" rows="4"></textarea>
         <button type="submit" class="cta-button primary">Get My Quote</button>
       </form>
     </div>
