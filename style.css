@@ -1,17 +1,184 @@
 :root {
-    --black: #000000;
-    --red: #C62721;
-    --blue:  #3D80C9;
-    --offwhite: #FBFBF3;
-    --navy: #1B1C30;
-  }
-
-  html {
-  scroll-behavior: smooth; /* Makes the CTA "jumps" feel better. Felt jagged otherwise */
+  --black: #000000;
+  --red: #C62721;
+  --blue: #3D80C9;
+  --offwhite: #FBFBF3;
+  --navy: #1B1C30;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--offwhite);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/*header*/
+.navbar-container {
+  position: relative;
+  background-color: var(--black); 
+  background-color: var(--black);
+  color: var(--offwhite);
+  padding: 2.5rem 1rem 5rem;
+  text-align: center;
+}
+
+header h1, header nav {
+  position: relative;
+  z-index: 10; 
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--offwhite);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+.nav-cta {
+  background-color: var(--offwhite);
+  color: var(--black) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+}
+
+.nav-cta:hover {
+  background-color: var(--red) !important;
+  color: white !important;
+}
+
+.rounded-edge {
+  position: absolute;
+  bottom: -1px; 
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+}
+
+.rounded-edge svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+}
+
+/*hero section*/
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-image.jpg') center/cover no-repeat;
+  background-color: #222; 
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--offwhite);
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  margin-top: -60px; 
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.subhead {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--red);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+/*Button */
+.cta-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background-color: var(--red);
+  color: white;
+  border: 2px solid var(--red);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #a31d18;
+  border-color: #a31d18;
+}
+
+/*packages */
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+  background-color: white;
+  color: var(--black);
+}
+
+/* sections styling*/
 .section-padding {
-  padding: 80px 10%;
+  padding: 80px 0;
 }
 
 .section-title {
@@ -21,119 +188,13 @@
   color: var(--navy);
 }
 
+
 .bg-light { background-color: #f1f1f1; }
 .bg-dark { background-color: var(--navy); color: var(--offwhite); }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+.bg-dark .section-title { color: var(--offwhite); } /* Fixes the invisible title */
 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--offwhite);
-    color: var(--black);
-    line-height: 1.6;
-  }
-
-  header {
-    background-color: var(--black);
-    color: var(--offwhite);
-    padding: 2.5rem 1rem 4rem; /* more padding to allow the curve to show */
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-
-  nav a {
-    color: var(--offwhite);
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-
-  .badge {
-  display: inline-block;
-  background: var(--red);
-  color: white;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-  
-  }
-  .hero {
-    background: url('hero-image.jpg') center/cover no-repeat;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--offwhite);
-    text-align: center;
-    padding: 6rem;
-    position: relative;
-    z-index: 0;
-  }
-
-  .hero h1 {
-    font-size: 4rem;
-    background: none;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-  }
-
-  .subhead {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 1rem auto;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-  }
-
-  .cta-group {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-  }
-  .cta-button {
-    background-color: var(--red);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .cta-button:hover {
-    background-color: var(--red);
-  }
-
-  .cta-button.secondary {
-  background-color: transparent;
-  border: 2px solid white;
-  }
-  section {
-    padding: 2rem;
-  }
-
-  .navbar-container{
-    position: relative;
-  }
-
-  .rounded-edge{
-    position: absolute;
-    bottom: 0;
-    left:0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: 3;
-  }
-
-  .card-grid, .package-grid {
+/*cards layout here*/
+.card-grid, .package-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -148,10 +209,12 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover { transform: translateY(-5px); };
+.card:hover { transform: translateY(-5px); }
+
 .package-card.featured {
   border: 3px solid var(--red);
   position: relative;
+  transform: scale(1.02);
 }
 
 .price {
@@ -166,16 +229,36 @@
   padding-left: 0;
 }
 
+.package-card li {
+  margin-bottom: 0.5rem;
+}
+
 .package-card li::before {
   content: "✓ ";
   color: var(--red);
+  font-weight: bold;
 }
 
-.rounded-edge svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-height: 40px;
+/*forms */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.step span {
+  background: var(--blue);
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .form-container {
@@ -197,129 +280,24 @@ input, select, textarea {
   border: 2px solid #eee;
   border-radius: 8px;
   font-family: inherit;
+  font-size: 16px;
+  width: 100%;
 }
 
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--blue);
-}
 
-;
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+footer {
+  background-color: var(--navy);
+  color: var(--offwhite);
   text-align: center;
+  padding: 2rem;
 }
 
-.step span {
-  background: var(--blue);
-  color: white;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  font-weight: bold;
-}
-
-input, select, textarea {
-  font-size: 16px !important; 
-}
-
-.faq-item {
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
-}
-  footer {
-    background-color: var(--navy);
-    color: var(--offwhite);
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-
+/*should allow mobile layout*/
 @media (max-width: 768px) {
-  .section-padding {
-    padding: 40px 5%;
-  }
-
-  .hero {
-    height: auto;
-    padding: 4rem 1.5rem;
-    min-height: 500px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .subhead {
-    font-size: 1.1rem;
-  }
-
-  .cta-group {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-button {
-    width: 100%; 
-    max-width: 280px;
-    margin-top:0.5rem;
-  }
-
-  .card-grid, .package-grid, .steps-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-  .form-container {
-    padding: 1.5rem;
-  }
-
-  input, select, textarea, .cta-button {
-        font-size: 16px;
-    }
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px;
-}
-
-nav a {
-    margin: 0;
-   white-space: nowrap;
-   padding: 10px 15px;
-   border-radius: 5px;
-}
-
-  .form-container {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
+  .hero h1 { font-size: 2.5rem; }
+  .cta-group { flex-direction: column; align-items: center; }
+  .cta-button { width: 100%; max-width: 300px; }
+  .package-card.featured { transform: none; }
+  nav { flex-direction: column; gap: 10px; }
+  .form-container { padding: 1.5rem; }
 }
