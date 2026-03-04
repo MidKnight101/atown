@@ -374,18 +374,28 @@ should allow mobile layout*/
 
 .form-subtitle{
   text-align: center;
+  font-size: 1.2rem;
+  color: var(--blue);
+  margin-bottom: 3rem;
+  font-weight: 500;
 }
 
 .branded-form{
   display:flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .form-row{
   display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .form-group{
   display:flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .form-group label{
