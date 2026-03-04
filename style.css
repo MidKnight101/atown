@@ -99,24 +99,88 @@ nav a:hover {
 
 /*hero section*/
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-image.jpg') center/cover no-repeat;
-  background-color: #222; 
-  min-height: 70vh;
+  background-color: #ddd;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--offwhite);
   text-align: center;
-  padding: 8rem 2rem 4rem;
-  margin-top: -60px; 
+  position: relative;
+  /*background: url('') center/cover no-repeat;*/
 }
 
-.hero h1 {
-  font-size: 4rem;
+.hero-overlay{
+  background: rgba(251,251,243,.85);
+  padding: 3rem;
+  border: 2px solid var(--red);
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: var(--red);
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
+.hero p{
+  font-size: 1.2rem;
+  color: var(--navy);
+}
+
+
+
+section{
+  padding: 5rem 0;
+}
+
+.split-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.info-box h3{
+  color: var(--red);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-box ul{
+  list-style: none;
+}
+
+.info-box li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.info-box li::before{
+  content: "•";
+  color: var(--blue);
+  font-weight: bold;
+  position:absolute;
+  left: 0;
+}
+
+.photo-holder{
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px dashed var(--blue);
+  margin: 2rem 0;
+}
+
+/*
 .subhead {
   font-size: 1.25rem;
   max-width: 600px;
@@ -134,7 +198,7 @@ nav a:hover {
   font-size: 0.8rem;
   margin-bottom: 1rem;
   border-radius: 4px;
-}
+}*/
 
 /*Button */
 .cta-group {
