@@ -57,72 +57,44 @@ h1, h2, h3{
 
 /*header*/
 .navbar-container {
-  position: relative;
-  background-color: var(--black); 
-  background-color: var(--black);
-  color: var(--offwhite);
-  padding: 2.5rem 1rem 5rem;
+  background-color: var(--cream); 
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--red);
+  position: sticky;
+}
+
+header{
+  padding: 1.5rem 0;
   text-align: center;
 }
 
-header h1, header nav {
-  position: relative;
-  z-index: 10; 
-}
-
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
+  font-size: 2rem;
+  color: var(--red); 
+  margin-bottom: 10px;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 nav a {
-  color: var(--offwhite);
+  color: var(--navy);
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-size: .9rem;
 }
 
 nav a:hover {
-  color: var(--red);
+  color: var(--blue);
 }
 
 .nav-cta {
-  background-color: var(--offwhite);
-  color: var(--black) !important;
-  padding: 0.5rem 1.25rem;
-  border-radius: 50px;
-}
-
-.nav-cta:hover {
-  background-color: var(--red) !important;
-  color: white !important;
-}
-
-.rounded-edge {
-  position: absolute;
-  bottom: -1px; 
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 3;
-}
-
-.rounded-edge svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 50px;
+  color: var(--red) !important;
 }
 
 /*hero section*/
