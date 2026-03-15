@@ -36,6 +36,13 @@ h1, h2, h3{
   letter-spacing: 1px;
 }
 
+h2.ourstory{
+  font-weight: 350;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 .section-title{
   text-align: center;
   font-size: 2.5rem;
@@ -368,7 +375,7 @@ should allow mobile layout*/
 .nav-logo {
   height: 100px; 
   width: auto;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .form-wrapper{
