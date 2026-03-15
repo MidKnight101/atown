@@ -365,6 +365,11 @@ footer {
 
 should allow mobile layout*/
 
+.nav-logo {
+  height: 100px; 
+  width: auto;
+  margin-bottom: 5px;
+}
 
 .form-wrapper{
   max-width: 700px;
