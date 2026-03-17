@@ -533,7 +533,7 @@ should allow mobile layout*/
 .text-red {
   color: var(--red);
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .split-grid{
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -550,5 +550,27 @@ should allow mobile layout*/
 
   .form-row{
     grid-template-columns: 1fr;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  section, article, .hero-overlay {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    font-size: 0.85rem; 
   }
 }
