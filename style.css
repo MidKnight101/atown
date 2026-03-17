@@ -36,10 +36,16 @@ h1, h2, h3{
   letter-spacing: 1px;
 }
 
-h2.ourstory{
+h1.ourstory{
   font-weight: 350;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+h2.ourstory{
+  font-weight: 350;
+  font-size: 15px;
   text-align: center;
 }
 
