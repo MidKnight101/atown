@@ -68,7 +68,6 @@ h2.ourstory{
   padding: 2rem 0;
 }
 
-/*header*/
 .navbar-container {
   background-color: var(--cream); 
   top: 0;
@@ -78,7 +77,9 @@ h2.ourstory{
 }
 
 header{
-  padding: 1.5rem 0;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 10px;
   text-align: center;
 }
 
