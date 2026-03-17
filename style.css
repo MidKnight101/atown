@@ -100,6 +100,7 @@ nav a {
   font-weight: bold;
   text-transform: uppercase;
   font-size: .9rem;
+  font-family: 'Rockwell Nova Condensed', 'Rockwell Condensed', Rockwell, serif;
 }
 
 nav a:hover {
@@ -151,7 +152,17 @@ section{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: start;
+}
+
+.info-box{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.text-content{
+  flex-grow: 1;
+  margin-bottom: 2rem;
 }
 
 .info-box h3{
